@@ -29,7 +29,9 @@ public class AuthorController {
             com.gemini.ims.model.Author dummyBody = null;
                 if(result!=null){
                     log.info("Data fetched successfully");
+                    System.out.println("Get Api");
                     return new ResponseEntity<>(result, HttpStatus.OK);
+
                 }
                 else{
                      log.info("Data not found : {}",Id);
