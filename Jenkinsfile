@@ -21,7 +21,7 @@ pipeline {
                    bat 'docker login -u qwerty123code -p ${dockerhubpwd}'
 
 }
-                   bat 'docker push misapp1.0'
+                   bat 'docker push misapp:1.0'
                 }
             }
         }
