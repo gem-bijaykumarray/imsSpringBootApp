@@ -14,18 +14,17 @@ pipeline {
                 }
             }
         }
-          stage('Push image to Hub'){
+         stage('Push image to Hub'){
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
-                   sh 'docker login -u javatechie -p ${dockerhubpwd}'
+                   bat 'docker login -u qwerty123code -p ${dockerhubpwd}'
 
 }
-                   sh 'docker push javatechie/devops-integration'
+                   bat 'docker push misapp1.0'
                 }
             }
         }
-
         stage('Deploy to k8s'){
             steps{
                 script{
